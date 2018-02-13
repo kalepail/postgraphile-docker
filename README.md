@@ -1,7 +1,9 @@
 ```bash
-docker run --rm -d \
+docker run --rm -it \
   -p 5000:5000 \
-  --name postgraphile \
-  tyvdh/postgraphile \
-  --connection postgres://{user}:{password}@{ip}:{port}/{database}
+  -e USER={username}
+  -e PASS={password}
+  -e HOST={hostname}
+  -e PORT={port}
+  -e DB={database}
 ```
