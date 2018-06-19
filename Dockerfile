@@ -11,6 +11,9 @@ RUN chmod +x /wait && \
     apk add git && \
     rm -rf /var/cache/apk/* && \
     npm install -g postgraphile && \
+    npm install graphile-build-pg && \
+    npm install graphql && \
+    npm install pg && \
     git clone https://github.com/mattbretl/postgraphile-plugin-connection-filter.git /plugins/connection-filter
 
 EXPOSE 5000
