@@ -4,7 +4,7 @@ FROM node:alpine
 COPY entrypoint.sh /
 
 ## Add the wait script to thdocke image
-ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.0.0/wait /wait
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
 
 RUN chmod +x /wait && \
     apk add --update bash && \
