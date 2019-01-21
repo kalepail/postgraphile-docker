@@ -4,10 +4,10 @@ FROM node:alpine
 COPY entrypoint.sh /
 
 ## Add the wait script to the docker image
-ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.3.0/wait /wait
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.5.0/wait /wait
 
 RUN chmod +x /wait && \
-    npm install --no-save postgraphile postgraphile-plugin-connection-filter
+    npm install --no-save postgraphile@next postgraphile-plugin-connection-filter@latest
 
 EXPOSE 5000
 
